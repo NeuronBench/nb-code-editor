@@ -6,7 +6,6 @@ let updateListenerExtension = EditorView.updateListener.of((update) => {
     // console.log(update.state.doc.toString());
     console.log(update.state.doc.toJSON());
     const doc = [...update.state.doc.toJSON()].join('\n');
-    console.log(doc);
     document.getElementById("editorInput").value = doc;
   }
 });
@@ -15,3 +14,5 @@ let editor = new EditorView({
   extensions: [basicSetup, updateListenerExtension, javascript()],
   parent: document.getElementById("editor"),
 });
+
+window.editor = editor;
