@@ -1,5 +1,5 @@
 {
-  "name": "io-service-editor",
+  "name": "nb-code-editor",
   "version": "0.1.0",
   "dependencies": {
     "@codemirror/lang-javascript": "^6.1.9",

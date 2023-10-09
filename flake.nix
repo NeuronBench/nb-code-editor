@@ -16,7 +16,7 @@
             };
 
             yarnDeps = pkgs.mkYarnModules {
-              pname = "io-service-editor-yarn-deps-4";
+              pname = "nb-code-editor-yarn-deps-4";
               version = "0.1.0";
               packageJSON = ./package.json;
               yarnLock = ./yarn.lock;
@@ -29,7 +29,7 @@
             {
               packages.yarnDeps = yarnDeps;
               packages.default = pkgs.stdenv.mkDerivation {
-                name = "io-service-editor-bundle";
+                name = "nb-code-editor-bundle";
                 src = ./.;
                 buildPhase = ''
                   PATH=$PATH:${yarnDeps}/node_modules/.bin
